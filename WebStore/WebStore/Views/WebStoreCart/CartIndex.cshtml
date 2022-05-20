@@ -1,0 +1,13 @@
+﻿@model WebStoreCartViewModel
+<div class="container">
+    @foreach (var el in Model.webStoreCart.listWebStoreItems)
+    {
+        <div class="alert alert-warning mt-3">
+            <b>Продукт:</b>@el.product.name<br />
+            <b>Цена:</b>@el.product.price.ToString("c")
+
+        </div>
+    }
+    <hr />
+    <a class="button" asp-controller="Order" asp-action="Checkout">Оплатить</a>
+</div>

@@ -1,0 +1,9 @@
+﻿@model Product
+
+<div class="col-lg-4">
+    <p><a><img src="@Model.img" alt="@Model.name" href="#" /></a></p>
+    <h2>@Model.name</h2>
+    <p>@Model.shortDesc</p>
+    <h3>Цена: @Model.price.ToString("c")</h3>
+    <p><a class="button" asp-controller="WebStoreCart" asp-action="addToCart" asp-route-id="@Model.id">В корзину</a></p>
+</div>
